@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products | FocusEye Security</title>
+<meta name="description" content="Browse CCTV cameras, NVR/DVR recorders, access control, alarms and accessories from FocusEye Security.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+
+<div class="utility-bar">
+  <div class="container">
+    <span class="utility-tagline">Smarter Security. Safer Tomorrow.</span>
+    <div class="utility-links">
+      <a href="contact.html">Support</a>
+      <a href="mailto:info@focuseye.co.nz" class="utility-phone"><i data-lucide="mail" width="14" height="14"></i> info@focuseye.co.nz</a>
+      <a href="tel:099724227" class="utility-phone"><i data-lucide="phone" width="14" height="14"></i> 09 972 4227</a>
+    </div>
+  </div>
+</div>
+
+<header class="main-nav">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="FocusEye Security home">
+      <svg class="logo-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="22" stroke="#0B2340" stroke-width="3"/>
+        <circle cx="24" cy="24" r="13" stroke="#1EB4C4" stroke-width="3"/>
+        <circle cx="24" cy="24" r="5" fill="#0B2340"/>
+      </svg>
+      <span>
+        <span class="logo-text">FOCUS<span>EYE</span></span>
+        <span class="logo-sub">SECURITY</span>
+      </span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="deals.html">Deals</a></li>
+        <li><a href="brands.html">Brands</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="solutions.html">Solutions</a></li>
+        <li><a href="training.html">Training</a></li>
+        <li><a href="contact.html">Support</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-primary btn-sm">Get a Quote</a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false"><i data-lucide="menu" width="26" height="26"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Products</h1>
+    <p class="breadcrumb"><a href="index.html">Home</a> / Products</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="products-layout">
+
+      <!-- ===== Sidebar Filters ===== -->
+      <aside class="filter-panel">
+        <h3>Category</h3>
+        <label><input type="checkbox" name="category" value="cctv"> CCTV Cameras</label>
+        <label><input type="checkbox" name="category" value="recorders"> NVR / DVR Recorders</label>
+        <label><input type="checkbox" name="category" value="access-control"> Access Control</label>
+        <label><input type="checkbox" name="category" value="alarms"> Alarm Systems</label>
+        <label><input type="checkbox" name="category" value="intercoms"> Intercoms</label>
+        <label><input type="checkbox" name="category" value="cabling"> Cabling &amp; Accessories</label>
+
+        <h3>Brand</h3>
+        <label class="brand-filter"><input type="checkbox" name="brand" value="hikvision"> <img src="assets/img/brands/partner-hikvision.png" alt="Hikvision"></label>
+        <label class="brand-filter"><input type="checkbox" name="brand" value="dahua"> <img src="assets/img/brands/partner-dahua.png" alt="Dahua"></label>
+        <label class="brand-filter"><input type="checkbox" name="brand" value="axis"> <img src="assets/img/brands/partner-axis.png" alt="Axis Communications"></label>
+        <label class="brand-filter"><input type="checkbox" name="brand" value="hilook"> <img src="assets/img/brands/partner-hilook.png" alt="Hilook"></label>
+
+        <h3>Price Range</h3>
+        <label for="price-range">Up to $1,000</label>
+        <input type="range" id="price-range" min="0" max="1000" value="1000">
+
+        <h3>Resolution</h3>
+        <label><input type="checkbox" name="resolution" value="4mp"> 4MP</label>
+        <label><input type="checkbox" name="resolution" value="5mp"> 5MP</label>
+        <label><input type="checkbox" name="resolution" value="4k"> 4K</label>
+      </aside>
+
+      <!-- ===== Product Grid ===== -->
+      <div>
+        <div class="toolbar">
+          <span class="result-count" id="result-count">8 products found</span>
+          <select id="sort-select" aria-label="Sort products">
+            <option value="popularity">Sort by: Popularity</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+
+        <div class="card-grid" id="product-grid">
+          <div class="product-card" data-category="cctv" data-brand="hikvision" data-price="129" data-popularity="90" data-newest="3">
+            <div class="thumb thumb-icon"><div class="icon-wrap"><i data-lucide="camera" width="48" height="48"></i></div></div>
+            <div class="body">
+              <h3>4MP IP Dome Camera</h3>
+              <p class="spec">Fixed lens, IR night vision up to 30m, IP67 rated</p>
+              <div class="price-row"><span class="price">$129.00</span></div>
+              <a href="#" class="btn btn-outline btn-block btn-sm">View Details</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="cctv" data-brand="dahua" data-price="169" data-popularity="80" data-newest="5">
+            <div class="thumb thumb-icon"><div class="icon-wrap"><i data-lucide="video" width="48" height="48"></i></div></div>
+            <div class="body">
+              <h3>5MP PoE Bullet Camera</h3>
+              <p class="spec">Weatherproof, 40m IR range, motion detection</p>
+              <div class="price-row"><span class="price">$169.00</span></div>
+              <a href="#" class="btn btn-outline btn-block btn-sm">View Details</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="cctv" data-brand="axis" data-price="349" data-popularity="70" data-newest="1">
+            <div class="thumb thumb-icon"><div class="icon-wrap"><i data-lucide="aperture" width="48" height="48"></i></div></div>
+            <div class="body">
+              <span class="badge">New</span>
+              <h3>4K PTZ Speed Dome</h3>
+              <p class="spec">20x optical zoom, auto-tracking, 4K resolution</p>
+              <div class="price-row"><span class="price">$349.00</span></div>
+              <a href="#" class="btn btn-outline btn-block btn-sm">View Details</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="recorders" data-brand="hikvision" data-price="229" data-popularity="85" data-newest="4">
+            <div class="thumb thumb-icon"><div class="icon-wrap"><i data-lucide="hard-drive" width="48" height="48"></i></div></div>
+            <div class="body">
+              <h3>8-Channel PoE NVR</h3>
+              <p class="spec">Supports up to 8MP cameras, 2x SATA bays</p>
+              <div class="price-row"><span class="price">$229.00</span></div>
+              <a href="#" class="btn btn-outline btn-block btn-sm">View Details</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="recorders" data-brand="hilook" data-price="599" data-popularity="60" data-newest="2">
+            <div class="thumb thumb-icon"><div class="icon-wrap"><i data-lucide="server" width="48" height="48"></i></div></div>
+            <div class="body">
+              <h3>32-Channel Enterprise NVR</h3>
+              <p class="spec">4x SATA bays, RAID support, up to 32MP</p>
+              <div class="price-row"><span class="price">$599.00</span></div>
+              <a href="#" class="btn btn-outline btn-block btn-sm">View Details</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="access-control" data-brand="dahua" data-price="279" data-popularity="55" data-newest="6">
+            <div class="thumb thumb-icon"><div class="icon-wrap"><i data-lucide="fingerprint" width="48" height="48"></i></div></div>
+            <div class="body">
+              <h3>Biometric Access Control Kit</h3>
+              <p class="spec">Fingerprint + card reader, 3,000 user capacity</p>
+              <div class="price-row"><span class="price">$279.00</span></div>
+              <a href="#" class="btn btn-outline btn-block btn-sm">View Details</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="alarms" data-brand="axis" data-price="199" data-popularity="65" data-newest="7">
+            <div class="thumb thumb-icon"><div class="icon-wrap"><i data-lucide="bell-ring" width="48" height="48"></i></div></div>
+            <div class="body">
+              <h3>Wireless Alarm System Kit</h3>
+              <p class="spec">Hub, 2x door sensors, motion sensor, siren</p>
+              <div class="price-row"><span class="price">$199.00</span></div>
+              <a href="#" class="btn btn-outline btn-block btn-sm">View Details</a>
+            </div>
+          </div>
+          <div class="product-card" data-category="intercoms" data-brand="hikvision" data-price="149" data-popularity="50" data-newest="8">
+            <div class="thumb thumb-icon"><div class="icon-wrap"><i data-lucide="phone-call" width="48" height="48"></i></div></div>
+            <div class="body">
+              <h3>HD Video Door Intercom</h3>
+              <p class="spec">Two-way audio, night vision, app integration</p>
+              <div class="price-row"><span class="price">$149.00</span></div>
+              <a href="#" class="btn btn-outline btn-block btn-sm">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="footer-blurb-logo">
+          <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="22" stroke="#FFFFFF" stroke-width="3"/>
+            <circle cx="24" cy="24" r="13" stroke="#1EB4C4" stroke-width="3"/>
+            <circle cx="24" cy="24" r="5" fill="#1EB4C4"/>
+          </svg>
+          <span class="logo-text">FOCUS<span>EYE</span></span>
+        </div>
+        <p>FocusEye Security supplies CCTV, access control and networked surveillance systems to installers, businesses and homeowners across New Zealand.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8zM9.6 15.5v-7l6.3 3.5-6.3 3.5z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.4h-3.5v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM7 20.4H3.6V9H7v11.4z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="about.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Tech Support</a></li>
+          <li><a href="contact.html">Apply for Trade Account</a></li>
+          <li><a href="mailto:info@focuseye.co.nz">info@focuseye.co.nz</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Locations</h4>
+        <ul>
+          <li><a href="contact.html">Auckland (Head Office)</a></li>
+          <li><a href="contact.html">Wellington Branch</a></li>
+          <li><a href="contact.html">Christchurch Branch</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Shipping / Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Trade</a></li>
+          <li><a href="#">Delivery &amp; Returns</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="payment-icons">
+        <span>VISA</span><span>Mastercard</span><span>PayPal</span><span>Bank Transfer</span>
+      </div>
+      <div>&copy; 2026 FocusEye Security. All rights reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js" defer></script>
+</body>
+</html>
