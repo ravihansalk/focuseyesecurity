@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function heroResetTimer() {
       if (heroTimer) clearInterval(heroTimer);
-      heroTimer = setInterval(function () { heroGoTo(heroCurrent + 1); }, 6000);
+      heroTimer = setInterval(function () { heroGoTo(heroCurrent + 1); }, 4000);
     }
 
     heroResetTimer();
