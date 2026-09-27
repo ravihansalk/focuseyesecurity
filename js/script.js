@@ -195,6 +195,9 @@ document.addEventListener("DOMContentLoaded", function () {
       fetch(contactForm.action, {
         method: "POST",
         headers: { "Accept": "application/json" },
+        // FormSubmit rejects requests with no Referer; Azure Static Web Apps
+        // sends "Referrer-Policy: same-origin", which would strip it.
+        referrerPolicy: "strict-origin-when-cross-origin",
         body: new FormData(contactForm)
       })
         .then(function (res) {
