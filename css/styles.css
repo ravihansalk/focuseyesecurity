@@ -857,13 +857,30 @@ textarea:focus-visible {
   aspect-ratio: 16 / 9;
   background: var(--gray-light) url("https://placehold.co/600x340/E9F3F8/0B2340?text=Map") center/cover;
 }
+.location-card .location-map {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: var(--gray-light);
+}
 .location-card .body { padding: 20px; }
+.location-card .meta a { color: inherit; }
+.location-card .meta a.view-all { color: var(--teal); }
 .location-card h3 { font-size: 17px; margin-bottom: 8px; }
 .location-card .meta { font-size: 14px; display: flex; align-items: flex-start; gap: 8px; margin-bottom: 6px; }
 .location-card .meta svg { flex-shrink: 0; margin-top: 3px; color: var(--teal); }
 
 @media (max-width: 1024px) { .location-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .location-grid { grid-template-columns: 1fr; } }
+
+/* Single head office: map beside details on wider screens */
+.location-grid--single { grid-template-columns: 1fr; }
+@media (min-width: 768px) {
+  .location-grid--single .location-card { display: grid; grid-template-columns: 3fr 2fr; }
+  .location-grid--single .location-map { aspect-ratio: auto; height: 100%; min-height: 320px; }
+  .location-grid--single .body { padding: 32px; align-self: center; }
+}
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--navy); color: var(--sky-start); }
