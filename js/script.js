@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Naming convention: deal-1.jpg, deal-2.png, deal-3.webp, ... (any of the
   // extensions below). Just drop numbered files into MainDeales — no HTML edits needed.
   // Any element with [data-deals-gallery] gets populated. The attribute value is
-  // either "all" or a number N, showing only the last N images found (e.g. the
+  // either "all" or a number N, showing only the first N images (deal-1, deal-2, ...) (e.g. the
   // homepage teaser uses data-deals-gallery="4").
   var dealsGalleryEls = Array.prototype.slice.call(document.querySelectorAll("[data-deals-gallery]"));
   if (dealsGalleryEls.length) {
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
         dealsGalleryEls.forEach(function (container) {
           var limitAttr = container.getAttribute("data-deals-gallery");
           var limit = limitAttr === "all" ? null : parseInt(limitAttr, 10);
-          var images = limit ? found.slice(-limit) : found;
+          var images = limit ? found.slice(0, limit) : found;
           renderGalleryInto(container, images);
         });
       }
