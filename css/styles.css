@@ -1328,3 +1328,16 @@ ul.checklist { margin-bottom: 0; }
 @media (min-width: 1241px) {
   .dropdown-menu::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 12px; }
 }
+.news-card h2.news-title { font-size: 18px; margin-bottom: 10px; }
+.explore-card {
+  display: block;
+  text-align: left;
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 28px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.explore-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card-hover); }
+.explore-card .read-more { color: var(--teal); font-weight: 600; font-size: 14px; }
