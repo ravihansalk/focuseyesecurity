@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://focuseye.co.nz/sitemap.xml
+Sitemap: https://focuseyesecurity.co.nz/sitemap.xml
