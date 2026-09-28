@@ -1,9 +1,76 @@
 {
   "routes": [
-    { "route": "/404.html", "headers": { "X-Robots-Tag": "noindex" } }
+    {
+      "route": "/about.html",
+      "redirect": "/about",
+      "statusCode": 301
+    },
+    {
+      "route": "/brands.html",
+      "redirect": "/brands",
+      "statusCode": 301
+    },
+    {
+      "route": "/capabilities.html",
+      "redirect": "/capabilities",
+      "statusCode": 301
+    },
+    {
+      "route": "/cctv-installation-auckland.html",
+      "redirect": "/cctv-installation-auckland",
+      "statusCode": 301
+    },
+    {
+      "route": "/combos.html",
+      "redirect": "/combos",
+      "statusCode": 301
+    },
+    {
+      "route": "/contact.html",
+      "redirect": "/contact",
+      "statusCode": 301
+    },
+    {
+      "route": "/deals.html",
+      "redirect": "/deals",
+      "statusCode": 301
+    },
+    {
+      "route": "/index.html",
+      "redirect": "/",
+      "statusCode": 301
+    },
+    {
+      "route": "/products.html",
+      "redirect": "/products",
+      "statusCode": 301
+    },
+    {
+      "route": "/services.html",
+      "redirect": "/services",
+      "statusCode": 301
+    },
+    {
+      "route": "/solutions.html",
+      "redirect": "/solutions",
+      "statusCode": 301
+    },
+    {
+      "route": "/training.html",
+      "redirect": "/training",
+      "statusCode": 301
+    },
+    {
+      "route": "/404.html",
+      "headers": {
+        "X-Robots-Tag": "noindex"
+      }
+    }
   ],
   "responseOverrides": {
-    "404": { "rewrite": "/404.html" }
+    "404": {
+      "rewrite": "/404.html"
+    }
   },
   "mimeTypes": {
     ".webp": "image/webp"
