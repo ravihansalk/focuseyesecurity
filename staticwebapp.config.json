@@ -1,0 +1,14 @@
+{
+  "routes": [
+    { "route": "/Home.txt", "rewrite": "/404.html", "statusCode": 404 },
+    { "route": "/Homepage.png", "rewrite": "/404.html", "statusCode": 404 },
+    { "route": "/focuseye-website-spec.md", "rewrite": "/404.html", "statusCode": 404 },
+    { "route": "/404.html", "headers": { "X-Robots-Tag": "noindex" } }
+  ],
+  "responseOverrides": {
+    "404": { "rewrite": "/404.html" }
+  },
+  "mimeTypes": {
+    ".webp": "image/webp"
+  }
+}

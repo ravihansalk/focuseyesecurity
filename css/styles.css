@@ -377,13 +377,15 @@ textarea:focus-visible {
 }
 .hero-slide-content { position: relative; z-index: 2; max-width: 560px; color: var(--white); }
 .hero-slide-content .eyebrow { color: var(--teal); }
-.hero-slide-content h1 {
+.hero-slide-content h1,
+.hero-slide-content h2 {
   color: var(--white);
   font-size: clamp(30px, 4.5vw, 46px);
   line-height: 1.15;
   margin-bottom: 16px;
 }
-.hero-slide-content h1 .highlight { color: var(--teal); display: block; }
+.hero-slide-content h1 .highlight,
+.hero-slide-content h2 .highlight { color: var(--teal); display: block; }
 .hero-slide-content p {
   color: rgba(255, 255, 255, 0.85);
   font-size: 16px;

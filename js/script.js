@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
       container.innerHTML = images.map(function (src, i) {
-        return '<figure><img src="' + src + '" alt="Deal ' + (i + 1) + '" loading="lazy"></figure>';
+        return '<figure><img src="' + src + '" alt="FocusEye Security CCTV and security deal ' + (i + 1) + '" loading="lazy"></figure>';
       }).join("");
     }
 
