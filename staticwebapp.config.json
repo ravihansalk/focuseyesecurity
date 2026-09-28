@@ -41,6 +41,11 @@
       "statusCode": 301
     },
     {
+      "route": "/privacy-policy.html",
+      "redirect": "/privacy-policy",
+      "statusCode": 301
+    },
+    {
       "route": "/products.html",
       "redirect": "/products",
       "statusCode": 301

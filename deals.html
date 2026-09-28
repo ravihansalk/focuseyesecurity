@@ -19,6 +19,16 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://focuseyesecurity.co.nz/" },
+    { "@type": "ListItem", "position": 2, "name": "Deals", "item": "https://focuseyesecurity.co.nz/deals" }
+  ]
+}
+</script>
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -55,13 +65,24 @@
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
         <li><a href="/deals" class="active">Deals</a></li>
+        <li class="nav-item-dropdown"><a href="/products">Products <i data-lucide="chevron-down" class="chevron" width="14" height="14"></i></a>
+          <div class="dropdown-menu">
+            <a href="/products">All Products</a>
+            <a href="/combos">Combo Kits</a>
+          </div>
+        </li>
         <li><a href="/brands">Brands</a></li>
-        <li><a href="/services">Services</a></li>
+        <li class="nav-item-dropdown"><a href="/services">Services <i data-lucide="chevron-down" class="chevron" width="14" height="14"></i></a>
+          <div class="dropdown-menu">
+            <a href="/services">All Services</a>
+            <a href="/cctv-installation-auckland">CCTV Installation Auckland</a>
+            <a href="/capabilities">Capabilities</a>
+          </div>
+        </li>
         <li><a href="/solutions">Solutions</a></li>
         <li><a href="/training">Training</a></li>
-        <li><a href="/contact">Support</a></li>
         <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contacts</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
     <div class="nav-actions">
@@ -87,9 +108,13 @@
       </div>
     </div>
 
-    <!-- Images are loaded dynamically from assets/img/deals-gallery — see js/script.js -->
-    <div class="deals-gallery" id="deals-gallery" data-deals-gallery="all">
-      <p class="deals-gallery-empty">Loading deals&hellip;</p>
+        <div class="deals-gallery" id="deals-gallery" data-deals-gallery>
+      <figure><img src="assets/img/deals-gallery/cctv-security-deal-1.webp" alt="HiLook by Hikvision 4-channel PoE NVR 2TB kit with 4 T262H-MU turret cameras, 10% off" loading="lazy" decoding="async" width="1515" height="1038"></figure>
+      <figure><img src="assets/img/deals-gallery/cctv-security-deal-2.webp" alt="Hikvision 16-channel 6MP kit with NVR and 6 AcuSense turret cameras, 10% off" loading="lazy" decoding="async" width="1515" height="1038"></figure>
+      <figure><img src="assets/img/deals-gallery/cctv-security-deal-3.webp" alt="4-camera smart HD CCTV kit with AI human detection and colour night vision, $899 + GST" loading="lazy" decoding="async" width="1008" height="575"></figure>
+      <figure><img src="assets/img/deals-gallery/cctv-security-deal-4.webp" alt="8-camera 4K Ultra HD home package and 4-camera rugged outdoor CCTV kit deals" loading="lazy" decoding="async" width="864" height="1184"></figure>
+      <figure><img src="assets/img/deals-gallery/cctv-security-deal-5.webp" alt="FocusEye Security dome camera overlooking the Auckland skyline at dusk" loading="lazy" decoding="async" width="1184" height="864"></figure>
+      <figure><img src="assets/img/deals-gallery/cctv-security-deal-6.webp" alt="FocusEye Security CCTV and security solutions for Auckland homes and businesses" loading="lazy" decoding="async" width="1344" height="768"></figure>
     </div>
   </div>
 </section>
@@ -112,17 +137,13 @@
           <span class="logo-text">FOCUS<span>EYE</span></span>
         </div>
         <p>FocusEye Security supplies CCTV, access control and networked surveillance systems to installers, businesses and homeowners across New Zealand.</p>
-        <div class="social-icons">
-          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H7.9V12h2.6V9.8c0-2.6 1.5-4 3.9-4 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8zM9.6 15.5v-7l6.3 3.5-6.3 3.5z"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.4h-3.5v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM7 20.4H3.6V9H7v11.4z"/></svg></a>
-        </div>
       </div>
       <div class="footer-col">
         <h4>About Us</h4>
         <ul>
           <li><a href="/about">Our Story</a></li>
-          <li><a href="/about">News</a></li>
+          <li><a href="/brands">Brands</a></li>
+          <li><a href="/training">Training</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
@@ -143,11 +164,9 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Shipping / Legal</h4>
+        <h4>Legal</h4>
         <ul>
-          <li><a href="#">Terms of Trade</a></li>
-          <li><a href="#">Delivery &amp; Returns</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
         </ul>
       </div>
     </div>

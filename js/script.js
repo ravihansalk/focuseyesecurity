@@ -66,81 +66,13 @@ document.addEventListener("DOMContentLoaded", function () {
     heroResetTimer();
   }
 
-  // ---------- Dynamic Deals Gallery (auto-probes assets/img/deals-gallery) ----------
-  // Naming convention: cctv-security-deal-1.jpg, cctv-security-deal-2.png, cctv-security-deal-3.webp, ... (any of the
-  // extensions below). Just drop numbered files into deals-gallery — no HTML edits needed.
-  // Any element with [data-deals-gallery] gets populated. The attribute value is
-  // either "all" or a number N, showing only the first N images (cctv-security-deal-1, -2, ...) (e.g. the
-  // homepage teaser uses data-deals-gallery="4").
+  // ---------- Deals Gallery ----------
+  // Deal images are written directly in the HTML (index.html shows the first 4,
+  // deals.html shows all) so search engines can index them. To add a deal, add a
+  // <figure><img ...></figure> to both galleries. Any [data-deals-gallery] element
+  // gets the click-to-enlarge lightbox below.
   var dealsGalleryEls = Array.prototype.slice.call(document.querySelectorAll("[data-deals-gallery]"));
   if (dealsGalleryEls.length) {
-    var GALLERY_PATH = "assets/img/deals-gallery/";
-    var GALLERY_EXTENSIONS = ["jpg", "jpeg", "png", "webp"];
-    var GALLERY_MAX_INDEX = 30;
-    var GALLERY_MAX_CONSECUTIVE_MISSES = 3;
-
-    function probeImage(src) {
-      return new Promise(function (resolve) {
-        var img = new Image();
-        img.onload = function () { resolve(src); };
-        img.onerror = function () { resolve(null); };
-        img.src = src;
-      });
-    }
-
-    function findImageForIndex(index) {
-      var candidates = GALLERY_EXTENSIONS.map(function (ext) {
-        return GALLERY_PATH + "cctv-security-deal-" + index + "." + ext;
-      });
-      return Promise.all(candidates.map(probeImage)).then(function (results) {
-        return results.filter(Boolean)[0] || null;
-      });
-    }
-
-    function renderGalleryInto(container, images) {
-      if (!images.length) {
-        container.innerHTML = '<p class="deals-gallery-empty">New deals are coming soon &mdash; check back shortly.</p>';
-        return;
-      }
-      container.innerHTML = images.map(function (src, i) {
-        return '<figure><img src="' + src + '" alt="FocusEye Security CCTV and security deal ' + (i + 1) + '" loading="lazy"></figure>';
-      }).join("");
-    }
-
-    (function scanGallery() {
-      var found = [];
-      var misses = 0;
-      var index = 1;
-
-      function next() {
-        if (index > GALLERY_MAX_INDEX || misses >= GALLERY_MAX_CONSECUTIVE_MISSES) {
-          finish();
-          return;
-        }
-        findImageForIndex(index).then(function (src) {
-          if (src) {
-            found.push(src);
-            misses = 0;
-          } else {
-            misses++;
-          }
-          index++;
-          next();
-        });
-      }
-
-      function finish() {
-        dealsGalleryEls.forEach(function (container) {
-          var limitAttr = container.getAttribute("data-deals-gallery");
-          var limit = limitAttr === "all" ? null : parseInt(limitAttr, 10);
-          var images = limit ? found.slice(0, limit) : found;
-          renderGalleryInto(container, images);
-        });
-      }
-
-      next();
-    })();
-
     // ---------- Deals Lightbox (click a deal image to view it large, centered) ----------
     var lightboxOverlay = document.getElementById("lightbox-overlay");
     var lightboxImage = document.getElementById("lightbox-image");
