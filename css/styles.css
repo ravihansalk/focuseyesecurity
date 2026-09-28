@@ -679,7 +679,7 @@ textarea:focus-visible {
 @media (max-width: 1024px) { .card-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .card-grid { grid-template-columns: 1fr; } }
 
-/* ---------- Deals Gallery (dynamic, from assets/img/MainDeales) ---------- */
+/* ---------- Deals Gallery (dynamic, from assets/img/deals-gallery) ---------- */
 .deals-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

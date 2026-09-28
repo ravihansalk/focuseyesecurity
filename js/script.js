@@ -66,15 +66,15 @@ document.addEventListener("DOMContentLoaded", function () {
     heroResetTimer();
   }
 
-  // ---------- Dynamic Deals Gallery (auto-probes assets/img/MainDeales) ----------
-  // Naming convention: deal-1.jpg, deal-2.png, deal-3.webp, ... (any of the
-  // extensions below). Just drop numbered files into MainDeales — no HTML edits needed.
+  // ---------- Dynamic Deals Gallery (auto-probes assets/img/deals-gallery) ----------
+  // Naming convention: cctv-security-deal-1.jpg, cctv-security-deal-2.png, cctv-security-deal-3.webp, ... (any of the
+  // extensions below). Just drop numbered files into deals-gallery — no HTML edits needed.
   // Any element with [data-deals-gallery] gets populated. The attribute value is
-  // either "all" or a number N, showing only the first N images (deal-1, deal-2, ...) (e.g. the
+  // either "all" or a number N, showing only the first N images (cctv-security-deal-1, -2, ...) (e.g. the
   // homepage teaser uses data-deals-gallery="4").
   var dealsGalleryEls = Array.prototype.slice.call(document.querySelectorAll("[data-deals-gallery]"));
   if (dealsGalleryEls.length) {
-    var GALLERY_PATH = "assets/img/MainDeales/";
+    var GALLERY_PATH = "assets/img/deals-gallery/";
     var GALLERY_EXTENSIONS = ["jpg", "jpeg", "png", "webp"];
     var GALLERY_MAX_INDEX = 30;
     var GALLERY_MAX_CONSECUTIVE_MISSES = 3;
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function findImageForIndex(index) {
       var candidates = GALLERY_EXTENSIONS.map(function (ext) {
-        return GALLERY_PATH + "deal-" + index + "." + ext;
+        return GALLERY_PATH + "cctv-security-deal-" + index + "." + ext;
       });
       return Promise.all(candidates.map(probeImage)).then(function (results) {
         return results.filter(Boolean)[0] || null;
